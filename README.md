@@ -12,6 +12,7 @@ in the creation of asset management portal.
 2. Django 3
 3. Django Rest Framework 
 4. drf-yasg - Swagger generator
+5. django-silk - 
 
 
 ### Set up Virtual Environment
@@ -65,6 +66,25 @@ You can use swagger to test the endpoints. Please use below url to open swagger 
 
 `http://localhost:8005/swagger/`
 
-![Swagger](swagger.PNG)
+![Swagger](static/swagger.PNG)
 
 
+## Enable Silk Profiling
+
+Silk is a live profiling and inspection tool for Django framework. You can check more details [here](https://github.com/jazzband/django-silk) 
+
+It is very handy tool to evaluate performance of any particular endpoint/service.  It helps us to understand how django 
+queries the Database, number of queries executed and time taken to execute each query.
+
+![Swagger](static/silk.PNG)
+
+
+You can check detail execution of DB transactions in SQL view 
+![Swagger](static/silk_sql.PNG)
+
+
+Turn on Python in-built cProfiler using below settings:
+
+    SILKY_PYTHON_PROFILER = True
+
+![Swagger](static/silk_cprofiler.PNG)
