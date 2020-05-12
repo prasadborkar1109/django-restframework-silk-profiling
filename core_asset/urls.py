@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     url(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
+    url(r'^silk/', include('silk.urls', namespace='silk')),
     path('user-mgmt/', include(user_router.urls)),
     path('asset-data/', include(asset_router.urls), name='asset-list'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
